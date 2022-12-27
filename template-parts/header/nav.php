@@ -13,7 +13,7 @@ $header_menus = wp_get_nav_menu_items($header_menu_id);
 ?>
 
 
-<nav class="navbar navbar-expand-lg bg-light">
+<nav class="navbar sticky-top navbar-expand-lg bg-light">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">
             <?php

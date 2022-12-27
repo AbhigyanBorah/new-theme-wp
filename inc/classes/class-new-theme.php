@@ -16,8 +16,10 @@ class NEW_THEME
 
     protected function __construct()
     {
+        Sidebars::get_instance();
         Assets::get_instance();
         Menus::get_instance();
+        Meta_Boxes::get_instance();
 
         //load classes
         $this->setup_hooks();
@@ -40,11 +42,14 @@ class NEW_THEME
             'flex-height' => true,
             'flex-width' => true,
         ]);
+
         add_theme_support('custom-background', [
             'default-color' => '#fff',
             'default-image' => '',
         ]);
         add_theme_support('post-thumbnails');
+
+        add_image_size('featured-thumbnail', 343, 229, true);
 
         add_theme_support('customize-selective-refresh-widgets');
 
